@@ -1,0 +1,84 @@
+/* ── Design Tokens ─────────────────────────────────────────── */
+:root {
+  --bg-deep:     #060912;
+  --bg-panel:    #0d1120;
+  --bg-card:     #131826;
+  --bg-card-hov: #1a2235;
+  --border:      rgba(99, 179, 237, 0.12);
+  --border-glow: rgba(99, 179, 237, 0.35);
+
+  --accent:       #4fc3f7;
+  --accent-2:     #7c3aed;
+  --accent-gold:  #f59e0b;
+  --accent-green: #22c55e;
+  --accent-red:   #ef4444;
+
+  --text-primary:   #e8edf5;
+  --text-secondary: #8a9bb8;
+  --text-muted:     #4a5568;
+
+  --font-display: 'Cinzel Decorative', serif;
+  --font-title:   'Cinzel', serif;
+  --font-body:    'Raleway', sans-serif;
+
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+
+  --shadow-card: 0 4px 24px rgba(0,0,0,0.4), 0 1px 0 rgba(99,179,237,0.06) inset;
+  --shadow-glow: 0 0 30px rgba(79,195,247,0.18);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg-deep);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-weight: 400;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-title);
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+}
+
+code {
+  font-family: 'Courier New', monospace;
+  background: rgba(79,195,247,0.1);
+  border: 1px solid rgba(79,195,247,0.2);
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-size: 0.85em;
+  color: var(--accent);
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-content {
+  flex: 1;
+  padding-top: 70px;
+}
+
+.footer {
+  text-align: center;
+  padding: 2rem;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  border-top: 1px solid var(--border);
+  letter-spacing: 0.05em;
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-deep); }
+::-webkit-scrollbar-thumb { background: var(--border-glow); border-radius: 3px; }

@@ -1,0 +1,138 @@
+.site-footer {
+  position: relative;
+  background: var(--bg-panel);
+  border-top: 1px solid var(--border);
+  overflow: hidden;          /* clips the logo that bleeds outside */
+  padding: 3rem 2rem 0;
+}
+
+/* ── Logo wrap — bottom-left corner, 60% visible ── */
+.site-footer__logo-wrap {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  /* overflow clip happens on .site-footer */
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── Main content row ── */
+.site-footer__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 3rem;
+  flex-wrap: wrap;
+  padding-bottom: 2.5rem;
+}
+
+/* Brand block */
+.site-footer__brand {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.site-footer__name {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  letter-spacing: 0.04em;
+}
+
+.site-footer__name-p1 { color: var(--text-primary); }
+.site-footer__name-p2 { color: var(--accent); }
+
+.site-footer__tagline {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  max-width: 280px;
+  line-height: 1.55;
+}
+
+.site-footer__copy {
+  font-size: 0.74rem;
+  color: var(--text-muted);
+  margin-top: 0.25rem;
+}
+
+/* Nav block */
+.site-footer__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-width: 120px;
+}
+
+.site-footer__nav-label {
+  font-family: var(--font-title);
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 0.25rem;
+}
+
+.site-footer__nav-link {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  text-align: left;
+  padding: 0;
+  transition: color 0.2s;
+}
+
+.site-footer__nav-link:hover {
+  color: var(--accent);
+}
+
+/* Bottom strip */
+.site-footer__bottom {
+  position: relative;
+  z-index: 1;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0 1.25rem;
+  border-top: 1px solid var(--border);
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.site-footer__server-ip {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Courier New', monospace;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.site-footer__ip-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-green);
+  box-shadow: 0 0 6px var(--accent-green);
+  animation: ipPulse 2s ease-in-out infinite;
+}
+
+@keyframes ipPulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.4; }
+}
+
+.site-footer__loader {
+  font-size: 0.74rem;
+  color: var(--text-muted);
+  font-family: var(--font-title);
+  letter-spacing: 0.06em;
+}
