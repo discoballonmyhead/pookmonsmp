@@ -43,7 +43,7 @@ export const SITE = {
   joinText: 'Download the modpack, fire up your launcher, and connect to the server.\nYour legend starts now.',
 
   // ── Downloads page ────────────────────────────────────────
-  modpackDownloadUrl: 'https://github.com/discoballonmyhead/pookmonsmp/releases/download/1.5/PookMonSMP-Mods.zip',
+  modpackDownloadUrl: 'https://github.com/discoballonmyhead/pookmonsmp/releases/download/v1.7/PookMonSMP-Mods.zip',
 
   zipFileName: 'PookMonSMP-Mods.zip',
   downloadTitle: 'Get the Modpack',
